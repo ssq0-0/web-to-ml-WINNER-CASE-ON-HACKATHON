@@ -4,7 +4,7 @@ import psycopg2
 def take_from_bd():
     connection = psycopg2.connect(
             user="myuser",             # ваше имя пользователя в PostgreSQL
-            password="ScR26011161",         # ваш пароль
+            password="***",         # ваш пароль
             host="127.0.0.1",                 # адрес сервера базы данных, обычно localhost
             port="5432",                      # порт
             database="II"     # имя вашей базы данных
@@ -35,7 +35,7 @@ def insert_category_theme(category, theme, text_data):
     try:
         connection = psycopg2.connect(
             user="myuser",  # ваше имя пользователя в PostgreSQL
-            password="ScR26011161",  # ваш пароль
+            password="***",  # ваш пароль
             host="127.0.0.1",  # адрес сервера базы данных, обычно localhost
             port="5432",  # порт
             database="II"  # имя вашей базы данных
