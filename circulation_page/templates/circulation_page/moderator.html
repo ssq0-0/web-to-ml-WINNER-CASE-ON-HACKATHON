@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Режим обучения</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'circulation_page/css/style.css' %}">
+</head>
+<body>
+  <img src="{% static 'circulation_page/img/iconCircle.png' %}" id="iconC">
+  <img src="{% static 'circulation_page/img/iconsAdvert.png' %}" id="iconA">
+  {% if id is not None %}
+  <form class="training-mode" method="post">
+    {{ csrf_input }}
+    <input type="hidden" value="{{ id }}" name="id">
+    <input type="hidden" value="ok" name="mode" id="mode">
+    <h1>РЕЖИМ ОБУЧЕНИЯ</h1>
+    <div class="dropdown">
+      <label for="category">Категория</label>
+      <input list="category" placeholder="{{ cat }}" name="category"/>
+      <datalist id="category">
+        <!-- Предполагаем, что categories - это переменная контекста, переданная в шаблон -->
+        {% for category in categories %}
+          <option value="{{ category }}">
+        {% endfor %}
+      </datalist>
+    </div>
+    <div class="dropdown">
+      <label for="subcategory">Подкатегория</label>
+      <input list="subcategory" placeholder="{{ theme }}" name="theme"/>
+      <datalist id="subcategory">
+        <!-- Предполагаем, что subcategories - это переменная контекста, переданная в шаблон -->
+        {% for subcategory in subcategories %}
+          <option value="{{ subcategory }}">
+        {% endfor %}
+      </datalist>
+    </div>
+    <div class="form-control">
+      <p>Сообщение для проверки</p>
+      <textarea disabled>{{ text }}</textarea> <!-- disabled="0" было заменено на disabled -->
+    </div>
+    <div id="container">
+      <button id="button-1" type="submit" onclick="document.getElementById('mode').value = 'del'">Удалить</button>
+      <button id="button-2" type="submit" onclick="document.getElementById('mode').value = 'save'">Сохранить</button>
+      <button id="button-3" type="submit" onclick="document.getElementById('mode').value = 'ok'">Отправить</button>
+    </div>
+  </form>
+  {% else %}
+    <h1>Обращений нет</h1>
+  {% endif %}
+</body>
+</html>
