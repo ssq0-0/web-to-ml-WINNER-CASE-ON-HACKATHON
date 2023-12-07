@@ -12,7 +12,7 @@ def add(text):
 
 
 def do_something():
-    token = '22ee45a722ee45a722ee45a7e021f82e35222ee22ee45a7478ed2d49e454b6780cae1ba'
+    token = ''
     ver = '5.199'
     count = '15'
 
