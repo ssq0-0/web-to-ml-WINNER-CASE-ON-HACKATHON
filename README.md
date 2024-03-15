@@ -178,7 +178,7 @@ sudo ufw allow 'Nginx Full'
 domain = 'example_domain'
 ```
 
-# Контакты разработчиков
+# Контакты разработчиков команды 'The Boys'
 [Ратников Максим - Front-end разработчик](https://github.com/RatnikovMax)
 
 [Шебани Антон - Data Science, Backend](https://github.com/modecstap)
