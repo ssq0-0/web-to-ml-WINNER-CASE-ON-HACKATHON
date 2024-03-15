@@ -16,7 +16,7 @@ def do_something():
     ver = '5.199'
     count = '15'
 
-    domain = 'gorodpermru'
+    domain = ''
 
     res_post = requests.get('https://api.vk.com/method/wall.get',
                  params={
