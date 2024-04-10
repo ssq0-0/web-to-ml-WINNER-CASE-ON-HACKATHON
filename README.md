@@ -177,7 +177,8 @@ sudo ufw allow 'Nginx Full'
 ```
 domain = 'example_domain'
 ```
-
+# Проект явялется победителем "Цифровой прорыв - Международный хакатон" в кейсе "Обработка обращений граждан" в Лиге новичков.
+![Image](https://ibb.co/PDxmy1D)
 # Контакты разработчиков команды 'The Boys'
 [Ратников Максим - Front-end разработчик](https://github.com/RatnikovMax)
 
